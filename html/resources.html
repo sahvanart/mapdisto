@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapDisto Genetics Software</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="icon" href="../img/fi.png">
+</head>
+
+<body class="fw-light">
+
+    <!-- ######################################### navbar ######################################## -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-light fs-4" href="#">
+                MapDisto Genetics Software
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse fw-light fs-4" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="downloads.html">Downloads</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item bg-dark text-muted nav-hover"
+                                    href="resources.html#resources">Resources</a></li>
+                            <!-- <li><a class="dropdown-item bg-dark text-muted nav-hover" href="resources.html#links">Links</a> -->
+                    </li>
+                    <li><a class="dropdown-item bg-dark text-muted nav-hover"
+                            href="resources.html#publications">Publications</a></li>
+                    <li><a class="dropdown-item bg-dark text-muted nav-hover" href="resources.html#author">Author</a>
+                    </li>
+
+                    <li><a class="dropdown-item bg-dark text-muted nav-hover"
+                            href="../index.html#tutorials">Tutorials</a>
+                    </li>
+                    <li><a class="dropdown-item bg-dark text-muted nav-hover" href="licence.html">Licence</a>
+                    </li>
+                </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#contact">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                            class="bi bi-house pb-1" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                            <path fill-rule="evenodd"
+                                d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                        </svg>
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container bg-secondary my-4 p-4 rounded fs-5" id="resources">
+        <h2 class="display-6 text-center my-4 py-4">Resources</h2>
+        <p class="lead text-center pb-2 fs-4">
+            Click on the links below to download resources.
+        </p>
+        <div class="row">
+            <div class="col">
+                <ul>
+                    <li class="pt-2">
+                        <a class="link-dark" download href="../dl/DB_Rice_SSRs_v_5.1.zip">DB_Rice_SSRs_v_5.1.zip</a>
+                        <br>Use this file with the "Extract map from DB" function in MapDisto to get the map positions
+                        of non-duplicated SSRs in the rice genome.
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" download href="../dl/mapmaker-OSX-Intel.zip">mapmaker-OSX-Intel.zip</a>
+                        <br>This is the Mapmaker installer for Mac OS X machines (Intel only). Note: I've noticed that
+                        this version of Mapmaker may not be able to find intitial subsets of markers when using the
+                        'Order all sequences' command. Double click on installer, then put the "mapmaker" folder in the
+                        "Applications" folder. The embedded "mmk.command" file is for MapDisto for Excel 2011.
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" download
+                            href="../dl/mapmaker-OSX-BDS-Intel.zip">mapmaker-OSX-BDS-Intel.zip</a> <br>This is the
+                        Mapmaker installer for Mac OS X machines (Intel only, big dataset). Note: I've noticed that this
+                        version of Mapmaker may not be able to find intitial subsets of markers when using the 'Order
+                        all sequences' command. Double click on installer, then put the "mapmaker" folder in the
+                        "Applications" folder. The embedded "mmk.command" file is for MapDisto for Excel 2011.
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" download href="../dl/mapmaker-OSX-PPC.zip">mapmaker-OSX-PPC.zip</a>
+                        <br>This is the Mapmaker installer for Mac OS X machines (Power PC only). Note: I've noticed
+                        that this version of Mapmaker may not be able to find intitial subsets of markers when using the
+                        'Order all sequences' command. Double click on installer, then put the "mapmaker" folder in the
+                        "Applications" folder. The embedded "mmk.command" file is for MapDisto for Excel 2004.
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" download href="../dl/mapmaker-DOS.zip">mapmaker-DOS.zip</a> <br>This is the
+                        Mapmaker installer for DOS-compatible PCs. It will often crash (I've only tested under Windows
+                        XP). Several re-lauchings of the Mapmaker commands from MapDisto may be necessary.
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" download href="../dl/mmk.command XL2011.zip">mmk.command XL2011.zip</a>
+                        <br>Replace the "mmk.command" file by this file in the "mapmaker" install folder if you use
+                        Excel 2011 for Mac OS X.
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" download href="../dl/mmk.command XL2004.zip">mmk.command XL2004.zip</a>
+                        <br>Replace the "mmk.command" file by this file in the "mapmaker" install folder if you use
+                        Excel 2004 for Mac OS X.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <hr>
+    </div>
+
+    <!-- <div class="container bg-secondary my-4 p-4 rounded fs-5" id="links">
+        <h2 class="display-6 text-center my-4 py-4">Links</h2>
+        <div class="row">
+            <div class="col">
+                <ul class="list-unstyled text-center">
+                    <li class="pt-2">
+                        Generation CP <a class="link-dark" href="https://www.integratedbreeding.net/" target="_blank">Integrated Breeding Platform</a> (MapDisto link)
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" href="" target="_blank">Genetic software list</a> at The Robert S. Boas Center for Genomics and Human Genetics (corrupted link)
+                    </li>
+                    <li class="pt-2">
+                        ... or it's <a class="link-dark" target="_blank" href="https://lab.rockefeller.edu/ott/" target="_blank">mirror site</a> at the Rockefeller University
+                    </li>
+                    <li class="pt-2">
+                       <a class="link-dark" target="_blank" href="https://www.integratedbreeding.net/" target="_blank">Linkage software list</a> at Weizmann Institute of Science
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" href="https://www.integratedbreeding.net/" target="_blank">Genetic mapping software list</a> at Mapmanager's web site (wrong link)
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" href="" target="_blank">The Plant Genome Databases</a> A Tutorial at USDA (missing link)
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" href="https://www.integratedbreeding.net/" target="_blank">Statistics in Genetics</a> at Berkeley (missing link)
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" href="https://www.integratedbreeding.net/" target="_blank">Genetics & Breeding related Software</a> at Wageningen Laboratory of Plant Breeding (inaccessible website)
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" href="https://www.integratedbreeding.net/" target="_blank">STAT LABS: Mathematical Statistics Through Applications</a> at STAT LABS (missing link)
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" href="https://www.integratedbreeding.net/" target="_blank">JF's Pages</a> Cool stuff for genetics and more (missing website)
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" target="_blank" href="https://mybiosoftware.com/mapdisto-1-75-map-genetic-markers-experimental-segregating-populations-backcross.html" target="_blank">mybiosoftware</a> Some description
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><hr></div> -->
+
+    <div class="container bg-secondary my-4 p-4 rounded fs-5" id="publications">
+        <h2 class="display-6 text-center my-4 py-4">Publications</h2>
+        <p class="lead text-center pb-2 fs-4">
+            Click on the links below to download publications.
+        </p>
+        <div class="row">
+            <div class="col">
+                <ul>
+                    <li class="pt-2">
+                        <a class="link-dark" target="_blank"
+                            href="https://academic.oup.com/bioinformatics/article/33/14/2224/3091810">[MapDisto]
+                            MapDisto 2.0 final article in Bioinformatics</a> <br>MapDisto 2.0 final article in
+                        Bioinformatics — doi: 10.1093/bioinformatics/btx177.
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" target="_blank"
+                            href="https://www.biorxiv.org/content/10.1101/089177v1">[MapDisto] MapDisto 2.0 publication
+                            (pre-print)</a> <br>MapDisto 2.0 pre-print on BioRxiv (2016) — doi: 10.1101/089177.
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" target="_blank"
+                            href="https://link.springer.com/article/10.1007/s11032-012-9706-y">[MapDisto] MapDisto final
+                            publication</a> <br>Publication of Molecular Breeding, 2012 — doi:10.1007/s11032-012-9706-y.
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" href="../dl/MapDisto_2012.pdf">[MapDisto] MapDisto publication
+                            (pre-print)</a> <br>Pre-print of Molecular Breeding, 2012 -- doi:10.1007/s11032-012-9706-y.
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" href="../dl/CSSL_Finder_2010.pdf">[CSSL Finder] CSSL Finder poster (2010,
+                            pdf)</a> <br>Ayling S and M Lorieux, 2010. The shortest path to CSSL selection. Agrigenomics
+                        World Congress, July 8-9 2010, Brussels, Belgium.
+                    </li>
+                    <li class="pt-2">
+                        <a class="link-dark" href="../dl/Phenomics_T-DNA.pptx">[Paddy Genes Book] Large-Scale
+                            Phenotyping of a Collection of T-DNA Insertion Lines of Rice (pptx)</a> <br>A presentation
+                        given at the Rice Genetics VI Conference (Manila, Nov 2009)
+                        .
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <hr>
+    </div>
+
+    <div class="container bg-secondary my-4 p-4 rounded fs-5 text-center" id="author">
+        <h2 class="display-6 my-4 py-4">Author</h2>
+        <p class="lead pb-2 fs-4">Mathias Lorieux.</p>
+        <div class="row">
+            <div class="col">
+                <p>I'm a researcher of the Institut de Recherche pour le Développement (<a class="link-dark"
+                        href="https://www.ird.fr/" target="_blank">IRD</a>), a French institute dedicated to scientific
+                    research for the developing countries, where I’m part of the <a class="link-dark"
+                        href="http://www.mpl.ird.fr/rice/" target="_blank">RICE</a> group a team of the <a
+                        class="link-dark" href="http://www.diade-research.fr/" target="_blank">DIADE</a> Research Unit.
+                </p>
+                <p>I also work with <a class="link-dark" href="http://www.ciat.cgiar.org/CIAT" target="_blank">CIAT</a>,
+                    Cali, Colombia, where I'm leading the <a class="link-dark"
+                        href="http://mlorieux.free.fr/Rice_Genomics/" target="_blank">Rice Genetics and Genomics</a>
+                    group, a joint research laboratory between IRD and CIAT.
+                </p>
+                <p>Questions or comments about the content of this web site are very welcomed. Please send me an <a
+                        class="link-dark"
+                        href="mailto:mapdisto@gmail.com?subject=Contact%20from%Mapdisto%20Software%20website">email</a>.
+                    Thank you.
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <hr>
+    </div>
+
+    <!-- ######################################### footer-social-section ######################################## -->
+
+    <div class="container bg-secondary rounded">
+        <div class="row py-4 justify-content-start">
+            <div class="col-xl-2 col-lg-3 col-md-4 ms-4">
+                <a class="link-dark fs-5" href="https://www.facebook.com/MapDisto" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-facebook me-2" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                    </svg>Facebook page</a>
+            </div>
+
+            <div class="col-xl-2 col-lg-2 ms-4">
+                <a class="link-dark fs-5" href="blog.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-book me-2" viewBox="0 0 16 16">
+                        <path
+                            d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                    </svg>Check our blog</a>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 ms-4">
+                <a class="link-dark fs-5" href="resources.html#author">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-code me-2" viewBox="0 0 16 16">
+                        <path
+                            d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z" />
+                    </svg>About Mathias</a>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 ms-4">
+                <a class="link-dark fs-5" href="https://groups.google.com/u/1/g/mapdisto" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-google me-2" viewBox="0 0 16 16">
+                        <path
+                            d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+                    </svg>Discussion group</a>
+            </div>
+        </div>
+
+        <div class="row py-4 justify-content-end">
+            <div class="col-lg-3 col-md-4 col-sm-5 text-end">
+                &copy; 2021 sahvanart
+                <a class="link-dark"
+                    href="mailto:sahvanart@gmail.com?subject=Contact%20from%20Mapdisto%20Software%20website">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-envelope-fill mb-1 ms-1" viewBox="0 0 16 16">
+                        <path
+                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+                    </svg>
+                </a>
+                <a class="link-dark" href="https://github.com/sahvanart/mapdisto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-github mb-1 ms-1" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
