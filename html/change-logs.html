@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapDisto Genetics Software</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="icon" href="../img/fi.png">
+</head>
+
+<body class="fw-light">
+
+    <!-- ######################################### navbar ######################################## -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-light fs-4" href="#">
+                MapDisto Genetics Software
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse fw-light fs-4" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="downloads.html">Downloads</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item bg-dark text-muted nav-hover"
+                                    href="resources.html#resources">Resources</a></li>
+                            <!-- <li><a class="dropdown-item bg-dark text-muted nav-hover" href="resources.html#links">Links</a> -->
+                    </li>
+                    <li><a class="dropdown-item bg-dark text-muted nav-hover"
+                            href="resources.html#publications">Publications</a></li>
+                    <li><a class="dropdown-item bg-dark text-muted nav-hover" href="resources.html#author">Author</a>
+                    </li>
+
+                    <li><a class="dropdown-item bg-dark text-muted nav-hover" href="#tutorials">Tutorials</a>
+                    </li>
+                    <li><a class="dropdown-item bg-dark text-muted nav-hover" href="change-logs.html">Change logs</a>
+                    </li>
+                    <li><a class="dropdown-item bg-dark text-muted nav-hover" href="licence.html">Licence</a>
+                    </li>
+                </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#contact">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                            class="bi bi-house pb-1" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                            <path fill-rule="evenodd"
+                                d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                        </svg>
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container bg-secondary my-4 p-4 rounded text-center fs-5">
+        <h2 class="display-6 text-center my-4 py-4">Mapdisto change logs</h2>
+        <div class="row">
+            <div class="col">
+                <p class="lead fw-bold">Current version: v. 2.1.7.3</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        Compatibility: Excel 2019/365 (32-bit and 64-bit). Should run fine with previous Excel versions
+                        (2007 - 2016). Windows 7 and 10. To handle very big datasets (e.g., GBS and high-density array
+                        genotyping), you will need the 64-bit versions of both Excel AND Windows
+                    </li>
+                    <li class="pt-2">
+                        Known issue: commands associated with the 'Compute RF & LOD' box of the R/qtl interface aren't
+                        available in this version. However, they are advantageously replaced by the MapDisto Addons Java
+                        module accessible from the 'Data' window
+                    </li>
+                    <li class="pt-2">
+                        Data:
+                        <ul>
+                            <li class="pt-2">
+                                New 'import data as binary' code (not used yet)
+                            </li>
+                            <li class="pt-2">
+                                'Filter loci' in 'Data' now correctly implements hard filtering
+                            </li>
+                            <li class="pt-2">
+                                Added a 'Keep codes' option for data filtering. This avoids transforming big data into
+                                integers
+                            </li>
+                            <li class="pt-2">
+                                Fixed a bug in data filtering that caused traits to be lost when data is big
+                            </li>
+                            <li class="pt-2">
+                                Function for creating normalized and centered-normalized data now creates traits in the
+                                range of values of the original trait
+                            </li>
+                            <li class="pt-2">
+                                New function to draw trait distributions from the Trait stats window
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pt-2">
+                        Data simulation: Fixed a bug that caused the map size to be 0 when simulating multiple
+                        sub-populations
+                    </li>
+                    <li class="pt-2">
+                        QTL search:
+                        <ul>
+                            <li class="pt-2">
+                                Added button to open Phenotype-Genotype window
+                            </li>
+                            <li class="pt-2">
+                                Faster trait distribution drawing in Phenotype-Genotype window (F2 NYI)
+                            </li>
+                            <li class="pt-2">
+                                Fixed a bug in Compare methods
+                            </li>
+                            <li class="pt-2">
+                                Fixed a bug in data filtering that caused traits to be lost when data is big
+                            </li>
+                            <li class="pt-2">
+                                Function for creating normalized and centered-normalized data now creates traits in the
+                                range of values of the original trait
+                            </li>
+                            <li class="pt-2">
+                                New function to draw trait distributions from the Trait stats window
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="lead fw-bold pt-4 pt-4">v. 2.1.7.1</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        Data:
+                        <ul>
+                            <li class="pt-2">
+                                Added a function to split a meta-population into sub-populations
+                            </li>
+                            <li class="pt-2">
+                                New 'import data as binary' code (not used yet)
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pt-2">
+                        Data simulation:
+                        <ul>
+                            <li class="pt-2">
+                                Use the Framework map in the Simulation module
+                            </li>
+                            <li class="pt-2">
+                                Add random traits to Data
+                            </li>
+                            <li class="pt-2">
+                                Add random traits to Data
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pt-2">
+                        QTL search: Corrected a bug that caused a few markers at the end of the last linkage group to be
+                        forgotten when plotting QTLs
+                    </li>
+                </ul>
+                <p class="lead fw-bold pt-4">v. 2.1.6.3</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        General:
+                        <ul>
+                            <li class="pt-2">
+                                MapDisto no longer needs to be installed under user account. That is, it can be run from
+                                a network drive or external volume </li>
+                            <li class="pt-2">
+                                Old legacy toolbar is removed at startup, so it will no longer appear in the Add-ins
+                                section of Excel's Ribbon </li>
+                            <li class="pt-2">
+                                Browser updated for QTL results, allowing better comparison between QTL methods
+                            </li>
+                            <li class="pt-2">
+                                Several minor bug fixes
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pt-2">
+                        QTL search:
+                        <ul>
+                            <li class="pt-2">
+                                Show a QTL region in Gbrowse
+                            </li>
+                            <li class="pt-2">
+                                QTL methods now use different output sheets
+                            </li>
+                            <li class="pt-2">
+                                'Plot QTL' now works if only one linkage group was calculated
+                            </li>
+                            <li class="pt-2">
+                                'Plot QTL' can now use physical positions if available (in marker names of type
+                                'Chr1_xxxxxx', where 'xxxxxx' is the physical position on chromosome 1 in base pairs)
+                            </li>
+                            <li class="pt-2">
+                                'Plot QTL' of metaQTL now displays individual populations together with the meta-QTL
+                                analysis
+                            </li>
+                            <li class="pt-2">
+                                QTL methods now use different output sheets
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pt-2">
+                        Data simulation:
+                        <ul>
+                            <li class="pt-2">
+                                Added a function to add quantitative traits to a simulated population
+                            </li>
+                            <li class="pt-2">
+                                'Use these data' now includes number of populations
+                            </li>
+                            <li class="pt-2">
+                                'Export data' and 'Import data' now include Comments, Title and Cross information
+                            </li>
+                            <li class="pt-2">
+                                Marker names are now composed of chromosome number and physical position
+                            </li>
+                            <li class="pt-2">
+                                Fake population and genotype names are now created
+                            </li>
+                            <li class="pt-2">
+                                Trait simulation now works for F2 and SSD populations
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pt-2">
+                        Data simulation: Fixed a bug that caused the map size to be 0 when simulating multiple
+                        sub-populations
+                    </li>
+                </ul>
+                <p class="lead fw-bold pt-4">v. 2.1.5.1</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        Data import/export:
+                        <ul>
+                            <li class="pt-2">
+                                Read data now accepts any data codes when data is big. In the previous version it would
+                                only accept the legacy Mapmaker/EXP ABCDH- format</li>
+                            <li class="pt-2">
+                                Import and Export data now handle genotype names</li>
+                            <li class="pt-2">
+                                'Import converted data' in the 'Addons' section of the Data window now imports the names
+                                of individuals. vbCrLf replaced by vbLf
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pt-2">
+                        QTL search:
+                        <ul>
+                            <li class="pt-2">
+                                Parametric QTL analysis (ANOVA1) for all traits now displays the -Log(p) value of the
+                                F-test
+                            </li>
+                            <li class="pt-2">
+                                New function to find QTL peaks from QTL output
+                            </li>
+                            <li class="pt-2">
+                                metaQTL: One can now specify the number of populations in the Data window
+                            </li>
+                            <li class="pt-2">
+                                metaQTL: metaQTL analysis can now be performed on all traits at once in F2 populations
+                            </li>
+                            <li class="pt-2">
+                                metaQTL: Improved trait data transformation method (meta-population only)
+                            </li>
+                            <li class="pt-2">
+                                metaQTL: New procedure to compute stats on traits (meta-population only)
+                            </li>
+                            <li class="pt-2">
+                                metaQTL: Calculation of number of d.o.f in metaQTL analysis now discards pops with very
+                                low size
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pt-2">
+                        Data simulation:
+                        <ul>
+                            <li class="pt-2">
+                                Added a function to add quantitative traits to a simulated population
+                            </li>
+                            <li class="pt-2">
+                                'Use these data' now includes number of populations
+                            </li>
+                            <li class="pt-2">
+                                'Export data' and 'Import data' now include Comments, Title and Cross information
+                            </li>
+                            <li class="pt-2">
+                                Marker names are now composed of chromosome number and physical position
+                            </li>
+                            <li class="pt-2">
+                                Fake population and genotype names are now created
+                            </li>
+                            <li class="pt-2">
+                                Trait simulation now works for F2 and SSD populations
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pt-2">
+                        Cosmetics: QTL button names updated + Browser updated with meta-QTL navigation
+                    </li>
+                    <li class="pt-2">
+                        Bug fixes:
+                        <ul>
+                            <li class="pt-2">
+                                Corrected wrong display of test name when QTL analysis performed on all traits in F2
+                                populations
+                            </li>
+                            <li class="pt-2">
+                                Corrected a bug in Export data as mapmaker file. The heterozygote symbol was wrongly
+                                exported in the header
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pt-2">
+                        Local recombination: Find local recombination peaks and distribution
+                    </li>
+                </ul>
+                <p class="lead fw-bold pt-4">v. 2.1.4.5</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        QTL search:
+                        <ul>
+                            <li class="pt-2">
+                                metaQTL: metaQTL analysis can now be performed on all traits at once (F2 populations not
+                                yet implemented). Includes QTL plotting
+                            </li>
+                            <li class="pt-2">
+                                metaQTL: added a function in 'Data' to transform phenotypic data for multiple
+                                populations. Allowed transformations are (1) centered and (2) centered-normalized
+                            </li>
+                            <li class="pt-2">
+                                metaQTL: Corrected a rare bug occurring when a F-test was equal to 0 in metaQTL analysis
+                                (except F2s)
+                            </li>
+                            <li class="pt-2">
+                                QTL: Added an option to draw map and trait histograms in R/qtl interface
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pt-2">
+                        Cosmetics:
+                        <ul>
+                            <li class="pt-2">
+                                Added a link to online help (Google groups) in the 'About' and 'Help' sections
+                            </li>
+                            <li class="pt-2">
+                                Added 'Online help' button in the Splash and Main menu windows, which links to the
+                                MapDisto Google discussion group page
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="lead fw-bold pt-4">v. 2.1.3</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        QTL search:
+                        <ul>
+                            <li class="pt-2">
+                                metaQTL: metaQTL analysis now uses Fisher’s method to combine p-values, which is more
+                                powerful and accurate than to Sum(F) and Sum(-log10p); F2s not yet implemented
+                            </li>
+                            <li class="pt-2">
+                                metaQTL: Faster final step of meta-QTL analysis (except for F2s)
+                            </li>
+                            <li class="pt-2">
+                                metaQTL: new procedure to create centered or centered-normalized data (meta-population
+                                only)
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pt-2">
+                        Bug fixes:
+                        <ul>
+                            <li class="pt-2">
+                                'Store data' and 'Use these data' now correctly store all genotype names when Big data
+                                is activated
+                            </li>
+                            <li class="pt-2">
+                                'Store data' and 'Use these data' now correctly store traits when Big data is activated
+                            </li>
+                            <li class="pt-2">
+                                'Show stored data' now works as expected after running 'Use these data' from a stored
+                                dataset
+                            </li>
+                            <li class="pt-2">
+                                'Draw a linkage group' can no longer use the 'Draw uniloci only' option when 'Alternate
+                                style' checkbox is unchecked
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="lead fw-bold pt-4">v. 2.1.2</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        QTL search: meta-QTL analysis now works for the "All linkage groups" option
+                    </li>
+                    <li class="pt-2">
+                        Bug fix: "Draw QTLs" from the meta-QTL window now works
+                    </li>
+                </ul>
+                <p class="lead fw-bold pt-4">v. 2.1.1</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        QTL search:
+                        <ul>
+                            <li class="pt-2">
+                                Extended meta-QTL analysis to backcross, RIL-SSD and doubled haploid populations
+                            </li>
+                            <li class="pt-2">
+                                Plot QTLs now available for meta-QTL analysis
+                            </li>
+                            <li class="pt-2">
+                                Corrected a bug in QTL and meta-QTL analysis for F2 populations (k2 was incorrectly
+                                calculated, leading to a slightly underestimated p-value)
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="lead fw-bold pt-4">v. 2.1.0</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        This update concerns the R/qtl interface. The following functions are now activated:
+                        <ul>
+                            <li class="pt-2">
+                                'Export genotype data to R/qtl' </li>
+                            <li class="pt-2">
+                                'Impute data in R/qtl' (uses R/qtl argmax procedure to impute and correct data) </li>
+                            <li class="pt-2">
+                                'Import imputed data' </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-secondary my-4 p-4 rounded text-center fs-5">
+        <h2 class="display-6 text-center my-4 py-4">CSSL Finder change logs</h2>
+        <div class="row">
+            <div class="col">
+                <p class="lead fw-bold">v. 0.9 alpha 14</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        Added a browser that makes navigation through the different CSSL Finder windows in Excel 2007
+                        easier
+                    </li>
+                    <li class="pt-2">
+                        Changed the names of the linkage groups in the example data file to numerical values (using non
+                        numerical values generates a bug in the Compute stats command)
+                    </li>
+                </ul>
+                <p class="lead fw-bold">v. 0.9 alpha 13</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        Fixed an issue linked to a memory overflow in the "Format data" command (Excel 2007 only)
+                    </li>
+                    <li class="pt-2">
+                        Fixed a bug in the "Import data" command. An error was generated when trying to import a data
+                        file with no trait values
+                    </li>
+                    <li class="pt-2">
+                        The "Format data" command now checks for marker positions. It verifies that the markers are
+                        ordered on the linkage groups according to ascending position values </li>
+                </ul>
+                <p class="lead fw-bold">v. 0.9 alpha 12</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        In the "Sorting Lines" window, it is now possible to sort the lines according to a list of lines
+                        (useful if you have a sublist of lines already but you don't remember how you got to this list)
+                    </li>
+                    <li class="pt-2">
+                        Fixed a bug in the example data format
+                    </li>
+                </ul>
+                <p class="lead fw-bold">v. 0.9 alpha 11</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        Better estimation of donor, recurrent and heterozygote genome contributions when the "Calculate
+                        true segment sizes" option is checked
+                    </li>
+                    <li class="pt-2">
+                        "Compute markers stats" is now based on the Formatted data, not the Raw data
+                    </li>
+                    <li class="pt-2">
+                        “Search NILs” is now functional
+                    </li>
+                    <li class="pt-2">
+                        A few interface improvements
+                    </li>
+                    <li class="pt-2">
+                        Several bug fixes
+                    </li>
+                </ul>
+                <p class="lead fw-bold">v. 0.9 alpha 8</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        Improvement of the "Complete data" command, which now takes into account the marker positions.
+                        The threshold for double recombinant probability can be set in tthe 'Options' window. Two
+                        mapping functions, Haldane or Kosambi, can be used for estimating the recombination frequencies
+                        from the map distances
+                    </li>
+                    <li class="pt-2">
+                        Better management of graphics when marker positions are expressed as physical map distances
+                    </li>
+                    <li class="pt-2">
+                        Option to estimate "true" segment sizes that calculates segment sizes in estimating
+                        recombination breakpoint locations </li>
+                    <li class="pt-2">
+                        Option to omit missing data singletons in the CSSL search
+                    </li>
+                    <li class="pt-2">
+                        Corrected a bug introduced in v. 0.9a7 that caused a loss of the first two rows of trait data
+                    </li>
+                    <li class="pt-2">
+                        A few other minor bugs fixes
+                    </li>
+                    <li class="pt-2">
+                        Some interface improvements
+                    </li>
+                </ul>
+                <p class="lead fw-bold">v. 0.9 alpha 7</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        The “Import data” command now includes a file localizer
+                    </li>
+                </ul>
+                <p class="lead fw-bold">v. 0.9 alpha 6</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        Better behavior of the “Import data” command
+                    </li>
+                    <li class="pt-2">
+                        Improvements in the example data sheet
+                    </li>
+                </ul>
+                <p class="lead fw-bold">v. 0.9 alpha 5</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        Fixed a compilation error that was occurring in the Excel 2004 (Mac OS X) version
+                    </li>
+                    <li class="pt-2">
+                        A couple of interface fixes
+                    </li>
+                </ul>
+                <p class="lead fw-bold">v. 0.9 alpha 4</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        Fixed more issues in version for Excel 2007
+                    </li>
+                    <li class="pt-2">
+                        Added error messages when trying to run commands when no data file has been imported
+                    </li>
+                </ul>
+                <p class="lead fw-bold">v. 0.9 alpha 3</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        Fixed a series of issues in version for Excel 2007
+                    </li>
+                    <li class="pt-2">
+                        A couple of small bugs fixed. No longer crashes Excel 2007 when exiting
+                    </li>
+                </ul>
+                <p class="lead fw-bold">v. 0.9 alpha 2</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        An Excel 2007-compatible version is now available for download, which allows managing datasets
+                        with large numbers of markers (16,000+). However, it runs significantly slower than within Excel
+                        2003, for reasons that I can't help in understanding. Also, Excel 2007 crashes when exiting CSSL
+                        Finder on my machine, nothing serious as the data are saved before it crashes. But not very
+                        elegant
+                    </li>
+                    <li class="pt-2">
+                        Feature: Command to reset CSSL Finder
+                    </li>
+                    <li class="pt-2">
+                        Interface: An icon (the small beer glass) will take you to the main menu from any window
+                    </li>
+                    <li class="pt-2">
+                        A couple of small bugs fixed
+                    </li>
+                </ul>
+                <p class="lead fw-bold">v. 0.8 beta 4</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        An Excel 2007-compatible version is now available for download, which allows managing datasets
+                        with large numbers of markers (16,000+). However, it runs significantly slower than within Excel
+                        2003, for reasons that I can't help in understanding. Also, Excel 2007 crashes when exiting CSSL
+                        Finder on my machine, nothing serious as the data are saved before it crashes. But not very
+                        elegant
+                    </li>
+                </ul>
+                <p class="lead fw-bold">v. 0.8 beta 3</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        Improvement : "Complete missing data" improved
+                    </li>
+                </ul>
+                <p class="lead fw-bold">v. 0.8 beta 2</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        Feature: new feature called "Complete missing data" in the "Marker data (formatted)" window.
+                        This function implements a very simple algorithm that infers missing data from the flanking
+                        markers. It may be useful to use it before running the "Search CSSLs" command in order to
+                        optimize the search for the best chromosomal segments according to the option chosen
+                    </li>
+                    <li class="pt-2">
+                        Improvement: "Import data" no longer modifies cell formatting in the Marker data and Trait data
+                        windows
+                    </li>
+                </ul>
+                <p class="lead fw-bold">v. 0.8 alpha 12</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        Improvement: more detailed Help
+                    </li>
+                </ul>
+                <p class="lead fw-bold">v. 0.8 alpha 11</p>
+                <ul class="text-start">
+                    <li class="pt-2">
+                        Many bug fixes, new functions and interface improvements
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ######################################### footer-social-section ######################################## -->
+
+    <div class="container bg-secondary rounded">
+        <div class="row py-4 justify-content-start">
+            <div class="col-xl-2 col-lg-3 col-md-4 ms-4">
+                <a class="link-dark fs-5" href="https://www.facebook.com/MapDisto" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-facebook me-2" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                    </svg>Facebook page</a>
+            </div>
+
+            <div class="col-xl-2 col-lg-2 ms-4">
+                <a class="link-dark fs-5" href="blog.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-book me-2" viewBox="0 0 16 16">
+                        <path
+                            d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                    </svg>Check our blog</a>
+            </div>
+
+            <div class="col-xl-2 col-lg-3 ms-4">
+                <a class="link-dark fs-5" href="resources.html#author">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-code me-2" viewBox="0 0 16 16">
+                        <path
+                            d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z" />
+                    </svg>About Mathias</a>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 ms-4">
+                <a class="link-dark fs-5" href="https://groups.google.com/u/1/g/mapdisto" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-google me-2" viewBox="0 0 16 16">
+                        <path
+                            d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+                    </svg>Discussion group</a>
+            </div>
+        </div>
+
+        <div class="row py-4 justify-content-end">
+            <div class="col-lg-3 col-md-4 col-sm-5 text-end">
+                &copy; 2021 sahvanart
+                <a class="link-dark"
+                    href="mailto:sahvanart@gmail.com?subject=Contact%20from%20Mapdisto%20Software%20website">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-envelope-fill mb-1 ms-1" viewBox="0 0 20 20">
+                        <path
+                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+                    </svg>
+                </a>
+                <a class="link-dark" href="https://github.com/sahvanart/mapdisto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-github mb-1 ms-1" viewBox="0 0 20 20">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>
